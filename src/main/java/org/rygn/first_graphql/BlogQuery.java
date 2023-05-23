@@ -7,13 +7,13 @@ import graphql.kickstart.tools.GraphQLQueryResolver;
 
 public class BlogQuery implements GraphQLQueryResolver {
 
-	private PostDao postDao;
+    private PlayerDao playerDao;
 
-    public BlogQuery(PostDao postDao) {
-        this.postDao = postDao;
+    public BlogQuery(PlayerDao playerDao) {
+        this.playerDao = playerDao;
     }
 
-    public List<Post> getRecentPosts(int count, int offset) {
-        return postDao.getRecentPosts(count, offset);
+    public List<Player> getRecentPosts(int count, int offset) {
+        return playerDao.getRecentPlayers(count, offset);
     }
 }

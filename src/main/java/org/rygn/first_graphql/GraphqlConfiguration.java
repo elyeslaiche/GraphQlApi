@@ -10,17 +10,16 @@ import org.springframework.context.annotation.Configuration;
 public class GraphqlConfiguration {
 
 	@Bean
-    public PostDao postDao() {
-        List<Post> posts = new ArrayList<>();
+    public PlayerDao playerDao() {
+        List<Player> players = new ArrayList<>();
         for (int postId = 0; postId < 10; ++postId) {
-            Post post = new Post();
-            post.setId("" + postId);
-            post.setTitle("Title " + postId);
-            post.setText("Text " + postId);
-            post.setCategory("Category " + (postId % 2 == 0 ? "1" : "2"));
-            posts.add(post);
+            Player player = new Player();
+            player.setId("" + postId);
+            player.setPrenom("Prenom " + postId);
+            player.setNom("Nom " + postId);
+            players.add(player);
         }
-        return new PostDao(posts);
+        return new PlayerDao(players);
     }
 	
 	@Bean
@@ -31,21 +30,19 @@ public class GraphqlConfiguration {
 		Team team1 = new Team();
 		team1.setId("FRA");
 		team1.setName("France");
-		team1.setColors("Bleu, blanc, rouge");
 		teams.add(team1);
 		
 		Team team2 = new Team();
 		team2.setId("SP");
 		team2.setName("Spain");
-		team2.setColors("Rouge, jaune");
 		teams.add(team2);
 		
 		return new TeamDao(teams);
 	}
 	
 	@Bean
-    public BlogQuery blogQuery(PostDao postDao) {
-        return new BlogQuery(postDao);
+    public BlogQuery blogQuery(PlayerDao playerDao) {
+        return new BlogQuery(playerDao);
     }
 	
 	@Bean
@@ -54,7 +51,7 @@ public class GraphqlConfiguration {
     }
 	
 	@Bean
-    public BlogMutation mutation(PostDao postDao) {
-        return new BlogMutation(postDao);
+    public BlogMutation mutation(PlayerDao playerDao) {
+        return new BlogMutation(playerDao);
     }
 }

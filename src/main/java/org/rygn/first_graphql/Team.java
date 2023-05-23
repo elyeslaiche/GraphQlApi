@@ -5,8 +5,6 @@ public class Team {
 	private String id;
 
 	private String name;
-	
-	private String colors;
 
 	public String getId() {
 		return id;
@@ -22,14 +20,6 @@ public class Team {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getColors() {
-		return colors;
-	}
-
-	public void setColors(String colors) {
-		this.colors = colors;
 	}
 	
 	

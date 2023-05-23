@@ -4,20 +4,19 @@ import graphql.kickstart.tools.GraphQLMutationResolver;
 
 public class BlogMutation implements GraphQLMutationResolver {
 	
-	private PostDao postDao;
+	private PlayerDao playerDao;
 
-    public BlogMutation(PostDao postDao) {
-        this.postDao = postDao;
+    public BlogMutation(PlayerDao playerDao) {
+        this.playerDao = playerDao;
     }
 
-    public Post writePost(String id, String title, String category, String text) {
+    public Player writePost(String id, String Nom, String Prenom) {
     	
-    	Post post = new Post();
-    	post.setId(id);
-    	post.setTitle(title);
-    	post.setCategory(category);
-    	post.setText(text);
+    	Player player = new Player();
+        player.setId(id);
+        player.setNom(Nom);
+        player.setPrenom(Prenom);
     	
-        return postDao.savePost(post);
+        return playerDao.savePost(player);
     }
 }
