@@ -37,7 +37,7 @@ pip install requests
 
 ### Running the application
 
-To run the application, navigate to the directory where `Client.py` is located and run:
+To run the application, navigate to the directory where `Client.py` is located (the src folder) and run:
 
 \`\`\`
 python Client.py
