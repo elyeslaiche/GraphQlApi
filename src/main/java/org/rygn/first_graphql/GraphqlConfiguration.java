@@ -41,8 +41,8 @@ public class GraphqlConfiguration {
 	}
 	
 	@Bean
-    public BlogQuery blogQuery(PlayerDao playerDao) {
-        return new BlogQuery(playerDao);
+    public PlayerQuery blogQuery(PlayerDao playerDao) {
+        return new PlayerQuery(playerDao);
     }
 	
 	@Bean
@@ -51,7 +51,7 @@ public class GraphqlConfiguration {
     }
 	
 	@Bean
-    public BlogMutation mutation(PlayerDao playerDao) {
-        return new BlogMutation(playerDao);
+    public PlayerMutation mutation(PlayerDao playerDao) {
+        return new PlayerMutation(playerDao);
     }
 }

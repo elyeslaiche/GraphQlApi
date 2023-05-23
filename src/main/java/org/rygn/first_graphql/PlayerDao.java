@@ -11,15 +11,14 @@ public class PlayerDao {
         this.Players = players;
     }
 
-    public List<Player> getRecentPlayers(int count, int offset) {
-    	
+    public List<Player> getrecentPlayers(int count, int offset) {
     	return this.Players.stream().skip(offset).limit(count).collect(Collectors.toList());
     }
 
-	public Player savePost(Player post) {
+	public Player savePlayer(Player player) {
 		
-		this.Players.add(post);
+		this.Players.add(player);
 		
-		return post;
+		return player;
 	}
 }
