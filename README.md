@@ -17,31 +17,31 @@ These instructions will get you a copy of the project up and running on your loc
 2. Open a terminal or command prompt in this directory.
 3. Run the following command:
 
-\`\`\`
+```
 git clone https://github.com/elyeslaiche/GraphQlApi.git
-\`\`\`
+```
 
 ### Setting up the environment
 
 After cloning the project, navigate into the project directory:
 
-\`\`\`
+```
 cd GraphQlApi
-\`\`\`
+```
 
 Next, you need to install the necessary Python libraries. You can do this by running:
 
-\`\`\`
+```
 pip install requests
-\`\`\`
+```
 
 ### Running the application
 
 To run the application, navigate to the directory where `Client.py` is located (the src folder) and run:
 
-\`\`\`
+```
 python Client.py
-\`\`\`
+```
 
 ## Usage
 
