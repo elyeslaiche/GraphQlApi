@@ -1,12 +1,14 @@
 package org.rygn.first_graphql;
 
-public class Post {
+public class Player {
 
 	private String id;
-    private String title;
-    private String category;
-    private String text;
-    
+    private String Nom;
+    private String prenom;
+
+	public Player() {
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -14,23 +16,17 @@ public class Post {
 		this.id = id;
 	}
 	
-	public String getTitle() {
-		return title;
+	public String getPrenom() {
+		return prenom;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
 	
-	public String getCategory() {
-		return category;
+	public String getNom() {
+		return Nom;
 	}
-	public void setCategory(String category) {
-		this.category = category;
-	}
-	public String getText() {
-		return text;
-	}
-	public void setText(String text) {
-		this.text = text;
+	public void setNom(String nom) {
+		this.Nom = nom;
 	}
 }
